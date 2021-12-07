@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getStepData() = lifecycleScope.launch {
         withContext(Dispatchers.IO) {
-            val dataSpec = SampleReadSpec.builder(HEART_RATE)
+            val dataSpec = SampleReadSpec.builder(BLOOD_PRESSURE)
             val timeSpec = TimeSpec.builder()
                 .setStartTime(Instant.ofEpochMilli(1577811600000))
                 .setEndTime(Instant.now())
